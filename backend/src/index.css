@@ -1,0 +1,371 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary-navy: #0f172a;
+    --primary-emerald: #059669;
+    --emerald-hover: #047857;
+    --accent-blue: #2563eb;
+    --bg-surface: #f8fafc;
+  }
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #090d16;
+  color: #f8fafc;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Light Mode Overrides - Comprehensive & Flawless Theme Support */
+html.light,
+html.light body,
+html.light #root,
+html.light main {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Background conversion for Light Mode */
+html.light .bg-slate-950,
+html.light .bg-slate-950\/90,
+html.light .bg-slate-950\/80,
+html.light .bg-slate-950\/70,
+html.light .bg-slate-950\/60,
+html.light .bg-slate-950\/50,
+html.light .bg-slate-950\/40,
+html.light .bg-slate-950\/30,
+html.light .bg-slate-950\/20,
+html.light .bg-slate-950\/10,
+html.light .bg-\[\#070a12\],
+html.light .bg-\[\#090d16\] {
+  background-color: #f8fafc !important;
+}
+
+html.light .bg-slate-900,
+html.light .bg-slate-900\/95,
+html.light .bg-slate-900\/90,
+html.light .bg-slate-900\/80,
+html.light .bg-slate-900\/70,
+html.light .bg-slate-900\/60,
+html.light .bg-slate-900\/50,
+html.light .bg-slate-900\/40,
+html.light .bg-slate-900\/30,
+html.light .bg-slate-900\/20,
+html.light .bg-\[\#0b0f19\],
+html.light .bg-\[\#0f172a\],
+html.light .bg-\[\#111827\],
+html.light .bg-\[\#1e293b\] {
+  background-color: #ffffff !important;
+}
+
+html.light .bg-slate-800,
+html.light .bg-slate-800\/90,
+html.light .bg-slate-800\/80,
+html.light .bg-slate-800\/70,
+html.light .bg-slate-800\/60,
+html.light .bg-slate-800\/50,
+html.light .bg-slate-800\/40,
+html.light .bg-slate-800\/30,
+html.light .bg-slate-800\/20,
+html.light .bg-\[\#121827\],
+html.light .bg-\[\#0e1322\],
+html.light .bg-\[\#0d1220\],
+html.light .bg-\[\#1a2236\],
+html.light .bg-\[\#171d33\],
+html.light .bg-\[\#12182b\],
+html.light .bg-\[\#121c33\],
+html.light .bg-\[\#1e2d4a\] {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+/* Hover States in Light Mode */
+html.light .hover\:bg-slate-800:hover,
+html.light .hover\:bg-slate-800\/80:hover,
+html.light .hover\:bg-slate-800\/60:hover,
+html.light .hover\:bg-\[\#1a2236\]:hover,
+html.light .hover\:bg-\[\#121827\]:hover {
+  background-color: #e2e8f0 !important;
+}
+
+html.light .hover\:bg-slate-900:hover,
+html.light .hover\:bg-slate-900\/80:hover {
+  background-color: #f8fafc !important;
+}
+
+/* Border conversion for Light Mode */
+html.light .border-slate-800,
+html.light .border-slate-800\/90,
+html.light .border-slate-800\/80,
+html.light .border-slate-800\/70,
+html.light .border-slate-800\/60,
+html.light .border-slate-800\/50,
+html.light .border-slate-800\/40,
+html.light .border-slate-800\/30,
+html.light .border-\[\#1e293b\],
+html.light .border-\[\#121827\] {
+  border-color: #e2e8f0 !important;
+}
+
+html.light .border-slate-700,
+html.light .border-slate-700\/90,
+html.light .border-slate-700\/80,
+html.light .border-slate-700\/70,
+html.light .border-slate-700\/60,
+html.light .border-slate-700\/50 {
+  border-color: #cbd5e1 !important;
+}
+
+html.light .border-slate-900,
+html.light .border-slate-900\/80 {
+  border-color: #e2e8f0 !important;
+}
+
+/* Text color conversion for Light Mode */
+html.light .text-white,
+html.light .text-slate-100,
+html.light .text-slate-200 {
+  color: #0f172a !important;
+}
+
+html.light .text-slate-300 {
+  color: #1e293b !important;
+}
+
+html.light .text-slate-400 {
+  color: #475569 !important;
+}
+
+html.light .text-slate-500 {
+  color: #64748b !important;
+}
+
+/* Ensure Primary Solid Buttons & Badges Retain White Text */
+html.light .bg-indigo-600,
+html.light .bg-indigo-600 *,
+html.light .bg-indigo-500,
+html.light .bg-indigo-500 *,
+html.light .bg-indigo-700,
+html.light .bg-indigo-700 *,
+html.light .bg-emerald-600,
+html.light .bg-emerald-600 *,
+html.light .bg-emerald-500,
+html.light .bg-emerald-500 *,
+html.light .bg-rose-600,
+html.light .bg-rose-600 *,
+html.light .bg-purple-600,
+html.light .bg-purple-600 *,
+html.light .bg-amber-600,
+html.light .bg-amber-600 *,
+html.light .bg-blue-600,
+html.light .bg-blue-600 * {
+  color: #ffffff !important;
+}
+
+/* Form inputs & modals in Light Mode */
+html.light input,
+html.light select,
+html.light textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+html.light select option {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+/* Dark badges in Light Mode for soft pastels */
+html.light .bg-indigo-950,
+html.light .bg-indigo-950\/90,
+html.light .bg-indigo-950\/80,
+html.light .bg-indigo-950\/60,
+html.light .bg-indigo-900\/50,
+html.light .bg-indigo-900\/30 {
+  background-color: #e0e7ff !important;
+  color: #3730a3 !important;
+  border-color: #c7d2fe !important;
+}
+
+html.light .bg-emerald-950,
+html.light .bg-emerald-950\/90,
+html.light .bg-emerald-950\/80,
+html.light .bg-emerald-950\/60,
+html.light .bg-emerald-900\/50,
+html.light .bg-emerald-900\/30 {
+  background-color: #d1fae5 !important;
+  color: #065f46 !important;
+  border-color: #a7f3d0 !important;
+}
+
+html.light .bg-amber-950,
+html.light .bg-amber-950\/90,
+html.light .bg-amber-950\/80,
+html.light .bg-amber-950\/60,
+html.light .bg-amber-900\/50,
+html.light .bg-amber-900\/30 {
+  background-color: #fef3c7 !important;
+  color: #92400e !important;
+  border-color: #fde68a !important;
+}
+
+html.light .bg-rose-950,
+html.light .bg-rose-950\/90,
+html.light .bg-rose-950\/80,
+html.light .bg-rose-950\/60,
+html.light .bg-rose-900\/50,
+html.light .bg-rose-900\/30 {
+  background-color: #ffe4e6 !important;
+  color: #9f1239 !important;
+  border-color: #fecdd3 !important;
+}
+
+html.light .bg-purple-950,
+html.light .bg-purple-950\/90,
+html.light .bg-purple-950\/80,
+html.light .bg-purple-950\/60,
+html.light .bg-purple-900\/50,
+html.light .bg-purple-900\/30 {
+  background-color: #f3e8ff !important;
+  color: #6b21a8 !important;
+  border-color: #e9d5ff !important;
+}
+
+html.light .bg-blue-950,
+html.light .bg-blue-950\/90,
+html.light .bg-blue-950\/80,
+html.light .bg-blue-950\/60,
+html.light .bg-blue-900\/50,
+html.light .bg-blue-900\/30 {
+  background-color: #dbeafe !important;
+  color: #1e40af !important;
+  border-color: #bfdbfe !important;
+}
+
+html.light .bg-cyan-950,
+html.light .bg-cyan-950\/20,
+html.light .bg-teal-950,
+html.light .bg-teal-950\/20 {
+  background-color: #ccfbf1 !important;
+  color: #115e59 !important;
+  border-color: #99f6e4 !important;
+}
+
+/* Modals & Backdrop in Light Mode */
+html.light .fixed.inset-0.bg-black\/80,
+html.light .fixed.inset-0.bg-black\/60,
+html.light .fixed.inset-0.bg-black\/50 {
+  background-color: rgba(15, 23, 42, 0.4) !important;
+  backdrop-filter: blur(4px);
+}
+
+/* Recharts & Tooltips in Light Mode */
+html.light .recharts-default-tooltip {
+  background-color: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #0f172a !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+}
+
+html.light .recharts-cartesian-grid-line line {
+  stroke: #e2e8f0 !important;
+}
+
+html.light .recharts-text {
+  fill: #475569 !important;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom ripple animation */
+@keyframes rippleEffect {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0.9;
+  }
+  100% {
+    width: 250px;
+    height: 250px;
+    opacity: 0;
+  }
+}
+
+.animate-ripple {
+  animation: rippleEffect 0.75s ease-out forwards;
+}
+
+/* Card Spotlight effect */
+.card-spotlight {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-spotlight::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(99, 102, 241, 0.12),
+    rgba(16, 185, 129, 0.05) 40%,
+    transparent 80%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.card-spotlight:hover::before {
+  opacity: 1;
+}
+
+/* Soft shadows and cards */
+.shadow-swiss {
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05);
+}
+
+.shadow-swiss-lg {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.04), 0 4px 6px -4px rgb(0 0 0 / 0.02);
+}
+
+/* Print utilities */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}

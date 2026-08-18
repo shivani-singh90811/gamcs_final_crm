@@ -1,0 +1,6 @@
+{
+  "name": "GAMCS CRM",
+  "description": "GAMCS CRM - Practice Management Platform with REST API integration and Gemini AI insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

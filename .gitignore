@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build
+dist/
+**/dist/
+target/
+**/target/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Spring secrets
+**/application.properties
+
+# IDE
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

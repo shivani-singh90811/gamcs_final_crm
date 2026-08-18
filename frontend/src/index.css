@@ -1,0 +1,197 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary-navy: #0f172a;
+    --primary-emerald: #059669;
+    --emerald-hover: #047857;
+    --accent-blue: #2563eb;
+    --bg-surface: #f8fafc;
+  }
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #090d16;
+  color: #f8fafc;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Light Mode Overrides */
+html.light body,
+html:not(.dark) body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Background conversion for Light Mode */
+html.light .bg-slate-950,
+html:not(.dark) .bg-slate-950 {
+  background-color: #f8fafc !important;
+}
+
+html.light .bg-slate-900,
+html:not(.dark) .bg-slate-900,
+html.light .bg-\[\#0b0f19\],
+html:not(.dark) .bg-\[\#0b0f19\] {
+  background-color: #ffffff !important;
+}
+
+html.light .bg-\[\#121827\],
+html:not(.dark) .bg-\[\#121827\],
+html.light .bg-\[\#0e1322\],
+html:not(.dark) .bg-\[\#0e1322\],
+html.light .bg-\[\#0d1220\],
+html:not(.dark) .bg-\[\#0d1220\] {
+  background-color: #f1f5f9 !important;
+}
+
+html.light .bg-slate-800,
+html:not(.dark) .bg-slate-800 {
+  background-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+/* Border conversion for Light Mode */
+html.light .border-slate-800,
+html:not(.dark) .border-slate-800,
+html.light .border-slate-800\/90,
+html:not(.dark) .border-slate-800\/90,
+html.light .border-slate-800\/80,
+html:not(.dark) .border-slate-800\/80,
+html.light .border-slate-800\/60,
+html:not(.dark) .border-slate-800\/60,
+html.light .border-slate-800\/50,
+html:not(.dark) .border-slate-800\/50 {
+  border-color: #e2e8f0 !important;
+}
+
+html.light .border-slate-700,
+html:not(.dark) .border-slate-700,
+html.light .border-slate-700\/80,
+html:not(.dark) .border-slate-700\/80 {
+  border-color: #cbd5e1 !important;
+}
+
+/* Text color conversion for Light Mode */
+html.light .text-white,
+html:not(.dark) .text-white,
+html.light .text-slate-100,
+html:not(.dark) .text-slate-100,
+html.light .text-slate-200,
+html:not(.dark) .text-slate-200 {
+  color: #0f172a !important;
+}
+
+html.light .text-slate-300,
+html:not(.dark) .text-slate-300 {
+  color: #334155 !important;
+}
+
+html.light .text-slate-400,
+html:not(.dark) .text-slate-400 {
+  color: #475569 !important;
+}
+
+/* Form inputs & modals in Light Mode */
+html.light input,
+html:not(.dark) input,
+html.light select,
+html:not(.dark) select,
+html.light textarea,
+html:not(.dark) textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light input::placeholder,
+html:not(.dark) input::placeholder,
+html.light textarea::placeholder,
+html:not(.dark) textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Dark badges in Light Mode for soft pastels */
+html.light .bg-indigo-950,
+html:not(.dark) .bg-indigo-950 {
+  background-color: #e0e7ff !important;
+  color: #3730a3 !important;
+  border-color: #c7d2fe !important;
+}
+
+html.light .bg-emerald-950,
+html:not(.dark) .bg-emerald-950 {
+  background-color: #d1fae5 !important;
+  color: #065f46 !important;
+  border-color: #a7f3d0 !important;
+}
+
+html.light .bg-amber-950,
+html:not(.dark) .bg-amber-950 {
+  background-color: #fef3c7 !important;
+  color: #92400e !important;
+  border-color: #fde68a !important;
+}
+
+html.light .bg-rose-950,
+html:not(.dark) .bg-rose-950 {
+  background-color: #ffe4e6 !important;
+  color: #9f1239 !important;
+  border-color: #fecdd3 !important;
+}
+
+html.light .bg-purple-950,
+html:not(.dark) .bg-purple-950 {
+  background-color: #f3e8ff !important;
+  color: #6b21a8 !important;
+  border-color: #e9d5ff !important;
+}
+
+html.light .bg-blue-950,
+html:not(.dark) .bg-blue-950 {
+  background-color: #dbeafe !important;
+  color: #1e40af !important;
+  border-color: #bfdbfe !important;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Soft shadows and cards */
+.shadow-swiss {
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05);
+}
+
+.shadow-swiss-lg {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.04), 0 4px 6px -4px rgb(0 0 0 / 0.02);
+}
+
+/* Print utilities */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}

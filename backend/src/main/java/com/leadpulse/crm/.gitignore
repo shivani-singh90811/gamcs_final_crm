@@ -1,0 +1,63 @@
+.env
+.env.*
+!.env.example
+
+node_modules/
+**/node_modules/
+
+dist/
+**/dist/
+
+target/
+**/target/
+
+*.log
+
+.idea/
+.vscode/
+
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Build
+dist/
+target/
+
+# IDE
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Spring Boot secrets
+**/src/main/resources/application.properties
+
+# Build
+target/
+**/target/
+dist/
+**/dist/
+
+# Logs
+*.log
+
+# IDE
+.idea/
+.vscode/
